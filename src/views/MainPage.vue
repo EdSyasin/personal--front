@@ -1,12 +1,15 @@
 <template>
-	<div>
-		hello world
-	</div>
+	<the-title></the-title>
 </template>
 
 <script>
+import TheTitle from '@/components/main-page/TheTitle';
+
 export default {
-	name: "MainPage"
+	name: "MainPage",
+	components: {
+		TheTitle
+	}
 }
 </script>
 

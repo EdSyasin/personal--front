@@ -28,10 +28,6 @@ module.exports = {
 					'css-loader',
 					'sass-loader'
 				]
-			},
-			{
-				test: /\.(png|jpe?g|gif)/,
-				loader: 'file-loader'
 			}
 		]
 	},
