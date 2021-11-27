@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {VueLoaderPlugin} = require('vue-loader');
 
 module.exports = {
-	entry: __dirname + "/src/app.js",
+	entry: __dirname + "/src/app.ts",
 	output: {
 		path: __dirname + "/dist",
 		filename: 'bundle.js',
@@ -18,6 +18,14 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.tsx?$/,
+				loader: 'ts-loader',
+				exclude: /node_modules/,
+				options: {
+					appendTsSuffixTo: [/\.vue$/]
+				}
+			},
+			{
 				test: /\.vue$/,
 				loader: "vue-loader"
 			},
@@ -32,7 +40,7 @@ module.exports = {
 		]
 	},
 	resolve: {
-		extensions: ['.js', '.vue'],
+		extensions: ['.js', '.ts', '.vue'],
 		alias: {
 			"@": __dirname + "/src"
 		}

@@ -7,8 +7,10 @@
 	</section>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
 	name: "TheTitle",
 	data(){
 		return {
@@ -16,7 +18,7 @@ export default {
 			description: "Frontend разработчик"
 		}
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>
@@ -34,7 +36,13 @@ export default {
 	}
 	
 	.main-page-title__title{
-		margin-top: 35%;
+		margin-top: 25%;
+		font-size: 60px;
+	}
+	
+	.main-page-title__description{
+		margin: 0;
+		font-size: 25px;
 	}
 	
 	
